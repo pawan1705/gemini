@@ -8,30 +8,31 @@ const Main = () => {
   return (
     <div className='main'>
         <div className="nav">
-            <p>SearchAI</p>
-            <img src={assets.user_icon} alt="" />
+            {/* <p>SearchAI</p> */}
+            <img className='logo' src={assets.logo_full} alt="" />
+            <img className='userD' src={assets.user_icon} alt="" />
         </div>
         {
             !showResult
             ?<>
             <div className="greet">
-                <p><span>Hello ,Ram.</span></p>
+                <p><span>Hello ,Buddy.</span></p>
                 <p>How Can I Help you Today ?</p>
             </div>
             <div className="cards">
-                <div className="card">
+                <div onClick={()=>onSent("Suggest Best Sunset Point in India")} className="card">
                     <p>Suggest Best Sunset Point in India</p>
                     <img src={assets.compass_icon} alt="" />
                 </div>
-                <div className="card">
+                <div onClick={()=>onSent("Briefly summarized this concept : urban planning")} className="card">
                     <p>Briefly summarized this concept : urban planning</p>
                     <img src={assets.bulb_icon} alt="" />
                 </div>
-                <div className="card">
+                <div onClick={()=>onSent("Brainstorm team bonding activities for our work retreat")} className="card">
                     <p>Brainstorm team bonding activities for our work retreat</p>
                     <img src={assets.message_icon} alt="" />
                 </div>
-                <div className="card">
+                <div onClick={()=>onSent("Improve the readability of the following code")} className="card">
                     <p>Improve the readability of the following code</p>
                     <img src={assets.code_icon} alt="" />
                 </div>
@@ -44,7 +45,7 @@ const Main = () => {
                     <p>{recentPrompt}</p>
                 </div>
                 <div className="result-data">
-                    <img src={assets.gemini_icon} alt="" />
+                    <img src={assets.logo_icon} alt="" />
                     {
                         loading
                         ?<div className='loader'>
@@ -71,7 +72,7 @@ const Main = () => {
                     </div>
                 </div>
                 <p className="bottom-info">
-                Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
+                searchAI may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
                 </p>
             </div>
         </div>

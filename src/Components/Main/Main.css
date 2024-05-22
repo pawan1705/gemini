@@ -12,9 +12,13 @@
     padding: 5px;
     color:#585858;
 }
-.main .nav img{
+.main .nav .userD{
     height: 50px;
     border-radius: 50%;
+}
+
+.main .nav .logo{
+    height: 50px;
 }
 
 .main-container{
@@ -22,7 +26,7 @@
     margin: auto;
 }
 .main .greet{
-    margin: 10px 0px;
+    margin: 10px 70px;
     font-size: 48px;
     color:#c4c7c5;
     font-weight: 500;
